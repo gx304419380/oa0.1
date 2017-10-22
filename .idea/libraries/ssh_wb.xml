@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ssh_wb">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../libs/ssh/ssh_wb" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../libs/ssh/ssh_wb" recursive="false" />
+  </library>
+</component>

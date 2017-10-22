@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="oa@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="oa">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bbs"/>
+    <schema id="4" parent="1" name="bbs2017"/>
+    <schema id="5" parent="1" name="customer"/>
+    <schema id="6" parent="1" name="hibernate"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="itcast"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="practise"/>
+    <schema id="12" parent="1" name="shop"/>
+    <schema id="13" parent="1" name="shopping"/>
+    <schema id="14" parent="1" name="spring"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="test"/>
+    <schema id="17" parent="1" name="test1"/>
+    <schema id="18" parent="1" name="test2"/>
+    <schema id="19" parent="1" name="web_test1"/>
+    <schema id="20" parent="1" name="weibo"/>
+    <table id="21" parent="2" name="department"/>
+    <table id="22" parent="2" name="role"/>
+    <table id="23" parent="2" name="user"/>
+    <table id="24" parent="2" name="user_role"/>
+    <column id="25" parent="21" name="did">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="21" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="27" parent="21" name="description">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="28" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>did</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="22" name="rid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="31" parent="22" name="description">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="32" parent="22" name="pid">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <key id="33" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="23" name="uid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="23" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="36" parent="23" name="password">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="37" parent="23" name="name">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="38" parent="23" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="39" parent="23" name="email">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="40" parent="23" name="sex">
+      <Position>7</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="41" parent="23" name="registerDate">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="42" parent="23" name="did">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="43" parent="23" name="FK285FEB2013A5F3">
+      <ColNames>did</ColNames>
+    </index>
+    <key id="44" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="45" parent="23" name="FK285FEB2013A5F3">
+      <ColNames>did</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>did</RefColNames>
+    </foreign-key>
+    <foreign-key id="46" parent="23" name="FKi1u4rjr8ytxgpuik5xygt3083">
+      <ColNames>did</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>did</RefColNames>
+    </foreign-key>
+    <column id="47" parent="24" name="rid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="24" name="uid">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="49" parent="24" name="FK143BF46ADCFCD925">
+      <ColNames>rid</ColNames>
+    </index>
+    <index id="50" parent="24" name="FK143BF46ADCFE4FBD">
+      <ColNames>uid</ColNames>
+    </index>
+    <key id="51" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid
+rid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="52" parent="24" name="FK143BF46ADCFCD925">
+      <ColNames>rid</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>rid</RefColNames>
+    </foreign-key>
+    <foreign-key id="53" parent="24" name="FKd7fdho22i1jlc5jt0vffe3a2c">
+      <ColNames>rid</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>rid</RefColNames>
+    </foreign-key>
+    <foreign-key id="54" parent="24" name="FK143BF46ADCFE4FBD">
+      <ColNames>uid</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>uid</RefColNames>
+    </foreign-key>
+    <foreign-key id="55" parent="24" name="FK42j8eo2o370t7a8lxafrahdsj">
+      <ColNames>uid</ColNames>
+      <RefSchemaName>oa</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>uid</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

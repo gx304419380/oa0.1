@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.fly.domain.User">
+        <id name="uid">
+            <generator class="increment"/>
+        </id>
+        <property name="username" length="20"/>
+        <property name="password" length="20"/>
+        <property name="name" length="20"/>
+        <property name="phone" length="15"/>
+        <property name="email" length="20"/>
+        <property name="sex" length="5"/>
+        <property name="registerDate"/>
+
+        <many-to-one name="department" class="com.fly.domain.Department" column="did"/>
+
+        <set name="roles" table="user_role">
+            <key>
+                <column name="uid"/>
+            </key>
+            <many-to-many class="com.fly.domain.Role" column="rid"/>
+        </set>
+    </class>
+</hibernate-mapping>
